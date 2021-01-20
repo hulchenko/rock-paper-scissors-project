@@ -15,14 +15,14 @@
 
         //first function:
         function userInput () {            
-        let playerSelection = window.prompt("Make your choice: Rock, Paper or Scissors?", "");
-        if ((playerSelection.toLowerCase()=="rock") ||
-            (playerSelection.toLowerCase()=="paper") ||
-            (playerSelection.toLowerCase()=="scissors")) {
-                console.log(gameRound(playerSelection, computerSelection))
+            let playerSelection = window.prompt("Make your choice: Rock, Paper or Scissors?", "");
+                 if ((playerSelection.toLowerCase()=="rock")
+                 || (playerSelection.toLowerCase()=="paper")
+                 || (playerSelection.toLowerCase()=="scissors")) {
+            console.log(gameRound(playerSelection, computerSelection))
             } else {
-                alert ("Wrong input!");
-                userInput();
+                        alert ("Wrong input!");
+                        userInput();
             }
         }
 
@@ -37,17 +37,17 @@
             playerSelection;
             computerSelection = computerPlay().toLowerCase();
             
-            if (playerSelection === computerSelection) {
+                if (playerSelection === computerSelection) {
                 return ("Draw!");
-            }
-            if ((playerSelection == "rock" && computerSelection == "paper") ||
-            (playerSelection == "paper" && computerSelection == "scissors") ||
-            (playerSelection == "scissors" && computerSelection == "rock")) {
-                return ("Computer won!");
-            }
-            else {
-                return ("You won!");
-            }
+                    }
+                    if ((playerSelection == "rock" && computerSelection == "paper")
+                    ||  (playerSelection == "paper" && computerSelection == "scissors") 
+                    ||  (playerSelection == "scissors" && computerSelection == "rock")) {
+                    return ("Computer won!");
+                     }
+                        else {
+                         return ("You won!");
+                        }
         }
 
         //let fiveRounds = [

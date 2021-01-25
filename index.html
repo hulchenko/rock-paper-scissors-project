@@ -3,65 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        let gameWeapon = ["Rock", "Paper", "Scissors"];
-        let playerSelection;
-        let computerSelection = computerPlay();
-
-        userInput();
-
-        //first function:
-        function userInput () {            
-            let playerSelection = window.prompt("Make your choice: Rock, Paper or Scissors?", "");
-                 if ((playerSelection.toLowerCase()=="rock")
-                 || (playerSelection.toLowerCase()=="paper")
-                 || (playerSelection.toLowerCase()=="scissors")) {
-            console.log(gameRound(playerSelection, computerSelection))
-            } else {
-                        alert ("Wrong input!");
-                        userInput();
-            }
-        }
-
-        //second function:
-        function computerPlay() {
-            return gameWeapon [Math.floor(Math.random()*gameWeapon.length)];
-        }
-        // to test: console.log(computerPlay());
-
-        //third function:
-        function gameRound(playerSelection, computerSelection) {
-            playerSelection;
-            computerSelection = computerPlay().toLowerCase();
-            
-                if (playerSelection === computerSelection) {
-                return ("Draw!");
-                    }
-                    if ((playerSelection == "rock" && computerSelection == "paper")
-                    ||  (playerSelection == "paper" && computerSelection == "scissors") 
-                    ||  (playerSelection == "scissors" && computerSelection == "rock")) {
-                    return ("Computer won!");
-                     }
-                        else {
-                         return ("You won!");
-                        }
-        }
-
-        //let fiveRounds = [
-        //    console.log(gameRound(playerSelection, computerSelection)),
-        //    console.log(gameRound(playerSelection, computerSelection)),
-        //    console.log(gameRound(playerSelection, computerSelection)),
-        //    console.log(gameRound(playerSelection, computerSelection)),
-        //    console.log(gameRound(playerSelection, computerSelection)),
-        //]
-       
-        //fourth function:
-        //function game() {
-        //    return fiveRounds;
-        //}
-    </script>
+    <h1>Rock Paper Scissors Game!</h1>
+    <div id="container">
+        <div class="scoreboard">
+            <h2 id="score-heading">Score</h2>
+            <div class="score">
+                <p id="player-score">Player: 0</p>
+                <p id="computer-score">Computer: 0</p>
+            </div>
+        </div>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>

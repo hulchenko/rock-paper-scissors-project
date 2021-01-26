@@ -7,19 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game!</h1>
-    <div id="container">
-        <div class="scoreboard">
+    <header>
+        <h1 class="title">Rock Paper Scissors Game!</h1>
+    </header>
+
+        <div class="score-board">
             <h2 id="score-heading">Score</h2>
             <div class="score">
-                <p id="player-score">Player: 0</p>
-                <p id="computer-score">Computer: 0</p>
+                <p id="player-score"><b>Player: </b>0</p>
+                <p id="computer-score"><b>Computer: </b>0</p>
             </div>
         </div>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <div class="result">
+            <p>Result</p>
+        </div>
+        <div class = "container">
+        <div id="rock" class = "choice">
+            <img src="images/icons8-hand-rock-96.png" alt="rock-hand">
+        </div>
+        <div id="paper" class = "choice">
+            <img src="images/icons8-hand-96.png" alt="paper-hand">
+        </div>
+        <div id="scissors" class = "choice">
+            <img src="images/icons8-hand-scissors-96.png" alt="scissor-hand">
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+<footer>
+    <h6>Click *Score* to reset!</h6>
+</footer>
 </html>
